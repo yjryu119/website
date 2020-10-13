@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <script src="./rezume/rezume/js/jquery.smoothwheel.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="./JQ/Counter-Up-master/jquery.counterup.min.js"></script>
+    <script type="text/javascript" src="https://rawgit.com/kimmobrunfeldt/progressbar.js/1.0.0/dist/progressbar.js"></script>
+    <script src="JS/Project(4)_Aesop/script.js"></script>
+
+   
+
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        color: rgb(44, 44, 44);
+        font-family: 'Noto Sans KR', sans-serif;
+    }
+
+    .wrapper{
+        background-color: rgb(240, 240, 240);
+        width: 100%;
+    }
+
+    .clear{
+        clear: both;
+    }
+ 
+
+
+    header{
+        width: 100%;
+        height: 100vh;
+        
+        background-image: url(img/aesop/store2.jpg);
+        background-size: 124% 105%;
+        /* background-size: 2094px 860px ; */
+        background-repeat: no-repeat;
+        /* background-size: cover; */
+        background-position: top left;
+        /* opacity: 0; */
+    }
+
+
+
+        .main_slogan{
+            width: 600px;
+            height: 100px;
+            /* border: 1px solid red; */
+            position: absolute;
+            top: calc( 50% - 30px);
+            left: calc(50% - 450px);
+            /* background-color: rgba(255, 255, 255, 0.63); */
+
+        }
+
+        .main_slogan p{
+            color: #C0B6B2;
+            text-align: left;
+            font-size: 13px;
+            font-weight: 100;
+            
+        }
+
+        .nav{
+            width: 200px;
+            height: 100vh;
+            position: fixed;
+            /* border: 1px solid red; */
+            padding-top:100px;
+            z-index: 998;
+            background-color: #5f433c;
+                     
+
+        }
+
+        .navoriginal{
+            /* background-color: transparent; */
+            transition: all 1s;
+        }
+        .navback{
+            background-color: rgba(255, 255, 255, 0.5);
+            background-color: #5f433c;
+            /* background-color:  #5f433c;    */
+            /* color: white; */
+            transition: all 1s;
+        }
+
+        .nav li{
+            /* width: 100%; */
+            /* height: 60px; */
+            /* border: 1px solid blue; */
+            padding: 20px;
+        }
+
+        .nav li a{
+            font-weight: 500;
+            width: 100px;
+            padding: 20px;
+            color: #080808;
+            /* color: white; */
+            /* border: 1px solid pink; */
+        }
+
+
+
+            ul.sub_list{
+            
+                /* opacity: 0; */
+                position: absolute;
+                /* border: 1px solid red; */
+                background-color: #bda48e;
+                height: 100vh;
+                width: 200px;
+                top: 0;
+                left: 200px;
+                transition: all 0.4s;
+                z-index: 9999 !important;
+            }
+
+            /* .nav:hover{
+                transition: 0.4s;
+                background-color: rgba(255, 255, 255, 0.486);
+               
+            }
+
+            .main_nav>ul>li>a:hover+ul.sub_list{
+                opacity: 1;
+               
+            } */
+         
+
+            .sub_list li{
+                padding: 20px;        
+            }
+
+            .one{
+                padding-top: 165px;      
+            }
+
+            .two{
+                padding-top:  230px;
+            }
+
+            .three{
+                padding-top: 295px;
+            }
+
+            .three input{
+                margin-top: 10px;
+                width: 120px;
+                margin-left: 40px;
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid rgb(32, 32, 32);
+                
+            }
+
+          
+
+
+
+
+
+        .sub_nav{
+            margin-top: 15px;
+            width: 100%;
+            float: left;
+            position: fixed;
+            /* border: 1px solid red; */
+            z-index: 996;
+
+           
+        }
+
+        .sub_nav li{
+            float: right;
+            padding: 5px;
+            /* margin-left: 10px; */
+            /* border: 1px solid rgb(236, 236, 236); */
+            border: 1px solid #362622;
+            /* background-color: #362622 ; */
+            /* border-radius: 20px; */
+            /* border-radius: 2px; */
+            margin-right: 10px;
+            
+        }
+
+        .sub_nav li:first-child{
+            margin-right: 50px;
+        }
+
+        .sub_nav li a {
+            font-weight: 300;
+            color: #362622;
+            /* color: rgb(236, 236, 236); */
+
+
+            padding: 5px;
+            font-size: 13px;
+        }
+
+
+
+
+    article{
+        width: calc(100% - 200px);
+        margin-left: 200px;
+    }
+
+        .top{
+            height: 760px;
+            /* border: 1px solid pink; */
+            margin-top: 100px;
+            width: 100%;
+            opacity: 0;
+            position: relative;
+        }
+
+        .section_title{
+            width: 93%;
+            margin-left: 50px;
+            padding-top: 60px;
+            border-bottom: 3px solid rgb(44, 44, 44);   
+        }
+
+
+        .filmWrapper{
+            width: calc(100% - 300px);
+            overflow: hidden;
+            float: left;
+            /* border: 1px solid green; */
+            margin-left: 150px;
+        }
+
+            .hover{
+                /* border: 1px solid red; */
+                position: absolute;
+                height: 420px;
+                width: 310px;
+                background-color: rgba(0, 0, 0, 0.432);
+                margin: 10px;
+                opacity: 0;
+                z-index: 19;
+               
+            }
+
+            .hover p{
+                line-height: 460px;
+                color: rgb(255, 255, 255);
+                font-size: 20px;
+                font-weight: 500;
+            }
+
+            .hover:hover{
+                opacity: 1;
+                transition: 1s;
+            }
+
+
+
+            section.top ul{ 
+                
+                width: 1500px;
+                height: 500px;
+                /* border: 1px solid red; */
+                margin: 0 auto;
+                float: left;
+            }
+
+            section.top ul li{ 
+                float: left;
+                margin-right:10px;
+                position: relative;
+            }
+
+            section.top ul li a{
+                display: block;
+                width: 330px;
+                /* border: 1px solid blue; */
+                text-align: center;
+            }
+
+            section.top ul img{
+                /* float: left; */
+                height: 400px;
+                margin: 40px 0px 0px 0px;
+                text-align: center;
+                /* border: 1px solid purple; */
+
+            }
+
+            section.top ul li:last-child img{
+                /* float: left; */
+                vertical-align: bottom;
+                height: 350px;
+                margin: 90px 0px 0px 0px;
+                text-align: center;
+                /* border: 1px solid purple; */
+            }
+
+            section.top .arrow_left{
+                /* float: left; */
+                /* border: 1px solid blue; */
+                width: 150px;
+                height: 500px;
+                vertical-align: middle;
+                z-index: 992;
+                position: absolute;
+                /* float: left; */
+                left: 0px;
+
+
+            }
+
+            section.top .arrow_right{
+                float: right;
+                /* border: 1px solid blue; */
+                width: 150px;
+                height: 500px;
+                vertical-align: middle;
+                z-index: 992;
+                position: absolute;
+                /* float: left; */
+                right: 0;
+            }
+
+            section.top .arrow_left img{
+                margin-top: calc(250px - 70px);
+                /* border: 1px solid purple; */
+                z-index: 49;
+            }
+
+            section.top .arrow_right img{
+                margin-top: calc(250px - 70px);
+                /* border: 1px solid purple; */
+                z-index: 49;
+            }
+
+                section.top .des_top{
+                    width: 330px;
+                    float: left;
+                    text-align: center;
+                    /* border: 1px solid red; */
+                }
+
+                section.top .des_top h4{
+                    color: rgb(34, 34, 34);
+                    font-weight: 500;
+                    font-size: 16px;
+                }
+
+                section.top .des_top p{
+                    color: rgb(34, 34, 34);
+                    font-size: 14px;
+                    /* font-weight: 300; */
+                }
+
+
+
+    .middle{
+        height: 100vh;
+        height: 760px;
+        opacity: 0;
+        
+        /* border: 1px solid red; */
+    }
+
+
+
+        section.middle ul img{
+            width: 850px;
+            width: 64%;
+            /* border: 1px solid blue; */
+            float: right;
+            position: relative;
+            z-index: 99;
+            margin-top: -80px;
+            /* margin-right: -40px; */
+
+        }
+
+
+        section.middle .des_middle{
+            margin-left: 50px;
+            /* width: 500px; */
+            width: calc( 100% - 870px);
+            /* border: 1px solid blue; */
+            position: absolute;
+            z-index: 990;
+            margin-top: 150px;
+   
+        }
+
+        section.middle .des_middle h2{
+            color: rgb(34, 34, 34);
+            /* width: calc( 100% - 870px); */
+            font-weight: 500;
+            font-size: 16px;
+            text-align: left;
+        }
+
+        section.middle .des_middle p{
+            width: 450px;
+            /* width: calc( 100% - 870px); */
+            margin-top: 50px;
+            color: rgb(34, 34, 34);
+            font-size: 14px;
+            text-align: justify;
+            /* border: 1px solid orange; */
+        } 
+
+        section.middle .more_button{
+            /* width: 100px; */
+            width: 120px;
+            border: 1px solid rgb(34, 34, 34);
+            margin-top: 50px;
+            background-color: rgb(34, 34, 34);
+        }
+
+        section.middle .more_button p{
+            width: 100px;
+            /* height: 50px; */
+            /* border: 1px solid rgb(34, 34, 34); */
+            margin-top: 0 ;
+            text-align: center;
+            padding: 10px;
+            font-size: 12px;
+            color: #F0F0F0;
+        }
+
+        section.middle .more_button:hover{
+            transition: 0.3s;
+            /* opacity: 1; */
+            background-color: transparent;
+            border: 1px solid rgb(34, 34, 34);
+        }
+
+        section.middle .more_button:hover p{
+            color: rgb(34, 34, 34);
+        }
+
+
+    .bottom{
+        height: 100vh;
+        height: 760px;
+        opacity: 0;
+    }
+
+        section.bottom ul{
+            margin-left: 50px;
+            margin-top: 30px;
+        }
+
+        
+        section.bottom ul img{
+            width: 52%;
+            float: left;
+        }
+
+
+        section.bottom .des_bottom{
+            margin-left: 50px;
+            /* width: 500px; */
+            width: calc( 100% - 60%);
+            /* border: 1px solid blue; */
+            float: left;
+            z-index: 999;
+            margin-top: 150px;
+            /* border: 1px solid green; */
+
+
+   
+        }
+
+        section.bottom .des_bottom h2{
+            color: rgb(34, 34, 34);
+            /* width: calc( 100% - 870px); */
+            font-weight: 500;
+            font-size: 16px;
+            text-align: left;
+        }
+
+        section.bottom .des_bottom p{
+            width: 100%;
+            /* width: calc( 100% - 870px); */
+            margin-top: 20px;
+            color: rgb(34, 34, 34);
+            font-size: 14px;
+            text-align: justify;
+            /* border: 1px solid orange; */
+        } 
+
+        section.bottom .more_button{
+            /* width: 100px; */
+            width: 120px;
+            border: 1px solid rgb(34, 34, 34);
+            margin-top: 80px;
+            background-color: rgb(34, 34, 34);
+        }
+
+        section.bottom .more_button p{
+            width: 100px;
+            /* height: 50px; */
+            /* border: 1px solid rgb(34, 34, 34); */
+            margin-top: 0 ;
+            text-align: center;
+            padding: 10px;
+            font-size: 12px;
+            color: #F0F0F0;
+        }
+
+        section.bottom .more_button:hover{
+            transition: 0.3s;
+            /* opacity: 1; */
+            background-color: transparent;
+            border: 1px solid rgb(34, 34, 34);
+        }
+
+        section.bottom .more_button:hover p{
+            color: rgb(34, 34, 34);
+        }
+
+
+    .bottom2{
+        opacity: 0;
+    }
+    .sentence{
+        width: 800px;
+        /* border: 1px solid red; */
+        text-align: left;
+        /* margin-left: calc(50% - 500px); */
+        /* margin: 0 auto; */
+        margin-left: 50px;
+        padding-top: 50px;
+        padding-bottom: 150px;
+        
+    }
+
+    .sentence p{
+        font-size: 30px;
+    }
+
+    .last{
+        width: 93%;
+        margin-left: 50px;
+        padding-top: 60px;
+        border-bottom: 1px solid rgb(44, 44, 44);   
+ 
+    }
+
+
+    footer{
+        width: 980px;
+        height: 150px;
+        /* border: 1px solid green; */
+        margin: 0 auto;
+        padding-bottom: 60px;
+        margin-top: 40px;
+        margin-left: 250px;
+        /* border-top:1px solid black ; */
+    }
+
+        footer ul{
+            height: 140px;
+            width: 150px;
+            float: left;
+            margin-right: 50px;
+            /* border: 1px solid red; */
+            padding-bottom: 50px;
+            
+        }
+
+        footer ul li a {
+            font-size: 13px;
+        }
+
+        
+        .address{
+            height: 140px;
+            width: 300px;
+            /* border-left: 1px solid rgb(34, 34, 34); */
+            float: left;
+            /* padding-left: 45px; */
+            /* padding-top: 20px; */
+            /* border: 1px solid darkolivegreen; */
+        }
+        .address p{
+            font-size: 13px;
+            line-height: 20px;
+        }
+
+        
+
+    .show{
+    transition: all 1s;
+    opacity: 1;
+    /* transform: translateX(-200px); */
+    }
+
+    
+        
+
+        
+
+
+
+
+
+
+    </style>    
+</head>
+
+
+
+<body>
+
+    <div class="wrapper">
+        <header>
+
+            <!-- <div class="main_slogan">
+                <p> 이솝은 세심하게 고안된 효과적이면서도, 감각적인 즐거움을 선사하는 <br> 스킨, 헤어, 바디 케어 제품을 제공합니다.
+                </p>
+            </div> -->
+            
+            <div class="nav">
+                <div class="main_nav">
+                    <ul>
+                        <li><a href="#"><img src="img/aesop/1200px-Aesop_logo_2013.svg.png" width="70px" alt=""></a></li>
+                        <li class="main_list"><a href="#">제품 보기</a>
+                            <ul class="sub_list one">
+                                <li><a href="#">스킨 </a></li>
+                                <li><a href="#">헤어 </a></li>
+                                <li><a href="#">바디 & 핸드</a></li>
+                                <li><a href="#">향수</a></li>
+                                <li><a href="#">키트 & 여행</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="main_list"><a href="#">읽기</a>
+                            <ul class="sub_list two">
+                                <li><a href="#">회사소개</a></li>
+                                <li><a href="#">철학</a></li>
+                                <li><a href="#">더 렛저</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="main_list"><a href="#">스토어</a>
+                            <ul class="sub_list three">
+                                <li><a href="#">국내</a></li>
+                                <li><a href="#">해외</a></li>
+                                <!-- <input type="text" placeholder="도시로 검색" > -->
+                            </ul>
+                        </li>
+<!-- 
+                        <li class="main_list"><a href="#">검색</a></li> -->
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="sub_nav">
+                <ul>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">카트</a></li>
+                </ul>
+            </div>
+
+
+            <div class="logo">
+                <img src="" alt="">
+            </div>
+
+           
+        </header> 
+
+        <article>
+
+            <section class="top cont">
+
+                <div class="new_arrivals section_title">
+                    <h2>New Arrivals</h2>
+                </div>
+
+                <div class="arrow_left">
+                    <img src="img/aesop/arrow_left.png"  width="150px" alt="">
+                </div>
+
+                <div class="filmWrapper">
+                    <ul class="pro_lists">
+                        <li>
+                            <a href="#">
+                                <div class="hover">
+                                    <p>더 알아보기</p>
+                                </div>
+                                <img src="img/aesop/top_item(1).webp" alt="">
+                            </a>
+                            
+                            <div class="des_top">
+                                <h4 class="product_name">
+                                    | 제라늄 리프 바디 클렌저 |
+                                </h4>                        
+                                <p class="description">
+                                    상쾌함을 선사하는 부드러운 젤 타입 클렌저
+                                </p>
+                            </div>
+
+                        </li>
+
+
+                        <li>
+                            <a href="#">
+
+                                <div class="hover">
+                                    <p>더 알아보기</p>
+                                </div>
+                                <img src="img/aesop/top_item(2).webp" alt=""></a>
+                            
+                            <div class="des_top">
+                                <h4 class="product_name">
+                                    | 라인드 컨센트레이트 바디 밤 |
+                                </h4>                        
+                                <p class="description">
+                                    빠른 흡수, 가벼운 수분 공급
+                                </p>
+                            </div>
+                        
+                        </li>
+
+
+                        <li>
+                            <a href="#">
+
+                                <div class="hover">
+                                    <p>더 알아보기</p>
+                                </div>
+                                <img src="img/aesop/top_item(3).webp" alt=""></a>
+                        
+
+                            <div class="des_top">
+                                <h4 class="product_name">
+                                    | 리뎀션 바디 스크럽 |
+                                </h4>                        
+                                <p class="description">
+                                    밤부사 불가리스 줄기 추출물 함유 
+                                </p>
+                            </div>
+                        
+                        </li>
+                        <li>
+                            
+                            <a href="#">
+                                <div class="hover">
+                                    <p>더 알아보기</p>
+                                </div>
+                                <img src="img/aesop/top_item(5).webp" width="340px" alt=""></a>
+                            
+                            <div class="des_top">
+                                <h4 class="product_name">
+                                    | 샤인 |
+                                </h4>                        
+                                <p class="description">
+                                    부드러운 광택을 주는 하이드레이팅 오일
+                                </p>
+                            </div>
+                    
+                        </li>
+                    </ul>
+                </div>
+
+                
+                <div class="arrow_right">
+                    <img src="img/aesop/arrow_right.png"  width="150px" alt="">
+                </div>
+
+            </section>
+
+            <div class="clear"></div>
+
+
+            <section class="middle cont">
+
+                <div class="gift_kits section_title">
+                    <h2>2020 S/S Gift Kits</h2>
+                </div>
+
+
+                <ul>
+                    <li><a href="#"><img src="img/aesop/Aesop-Kits-Gift-Kits-2019-20-The-Melodist-with-Product-Large-1434x962px.webp" alt=""></a>
+                    <div class="des_middle">
+
+                        <h2>
+                            | 연말연시 선물을 위해 감각적 즐거움을 선사하는 기프트 |
+                        </h2>
+                        <p>
+                            시즈널 컬렉션 ‘오브 뮤즈 앤드 미스’의 다섯 가지 기프트 중 하나인 더 멜로디스트는 매혹적인 음악의 뮤즈 에우테르페(Euterpe)를 기립니다. 자신이나 친구와 가족을 위해 마련한 주변 공간에 부드러운 달콤함을 불어넣는 분들에게 이상적인 홈 기프트로 마련되었습니다.
+                        </p> 
+                        
+                        <div class="more_button">
+                            <a href="#"><p>더 알아보기 + </p></a>
+                        </div>
+
+                    </div>
+                    
+                    </li>
+                </ul>
+
+               
+
+ 
+            </section>
+
+            <div class="clear"></div>
+
+
+            <section class="bottom cont">
+               
+                <div class="new_store section_title">
+                    <h2>New Store Opening</h2>
+                </div>
+
+                <ul>
+                    <li><a href="#"><img src="img/aesop/store4.jpg" width="650px"></a>
+                        
+                    <div class="des_bottom">
+                        <h2>
+                            | 신규 스토어: 이솝 롯데 수지 |
+                        </h2>
+                        <p>
+                            새롭게 오픈한 이솝 스토어에서 소중한 사람을 위한 시즈널 기프트를 만나보세요.
+                        </p> 
+                        
+                        <div class="more_button">
+                            <a href="#"><p>더 알아보기 + </p></a>
+                        </div>
+                    </div>
+                    
+                    
+                    </li>
+                </ul>
+
+            </section>
+
+            <div class="clear"></div>
+
+            <section class="bottom2 cont">
+                <div class="sentence">
+                    <p>‘Know'st thou the land where the lemon-trees bloom?’</p>
+                    <h4>Johann Wolfgang von Goethe</h4>
+                </div>
+
+                <div class="last section_title">
+            
+                </div>
+
+            </section>
+        </article>
+
+         <footer>
+            
+            <ul>
+                <li><a href="#">문의하기</a></li>
+                <li><a href="#">FAQS</a></li>
+                <li><a href="#">배송 및 반품</a></li>
+                <li><a href="#">배송 확인</a></li>
+                <li><a href="#">이용 약관</a></li>
+                <li><a href="#">개인정보 정책</a></li>
+            </ul>
+
+            <ul>
+                <li><a href="#">브랜드 스토리</a></li>
+                <li><a href="#">채용</a></li>
+                <li><a href="#">마케팅 문의</a></li>
+                <li><a href="#">기업용 선물</a></li>
+                <li><a href="#">페이셜 어포인트먼트</a></li>
+                <li><a href="#">개인 정보 보호 정책</a></li>
+            </ul>
+
+            <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">LinkedIn</a></li>
+                <li><a href="#">Kakao Plus Friend</a></li>
+                <li><a href="#">Naver Post</a></li>
+                <li><a href="#">Facebook</a></li>
+            </ul>
+
+
+  
+
+            
+            
+            <div class="address">
+                <p>상호: 이솝코리아 유한회사<br>주소: 서울특별시 강남구 선릉로 162길 3 이솝코리아 3층  <br> 대표자: 마이클안토니오키프 <br>
+                대표전화: 1800-1987 
+                <br> 대표 이메일: aesop@aesop.com <br> 
+                사업자 등록 번호: 220-88-56014 <br> 통신판매업 신고번호: 2014-서울강남-02300
+            </p>
+            </div>
+            
+        </footer>
+
+
+        
+
+    </div>
+
+    
+</body>
+</html>

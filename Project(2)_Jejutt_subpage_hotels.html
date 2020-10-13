@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="JQ/jquery-3.5.1.min.js"></script>
+    <script src="JQ/jquery-migrate-1.4.1.min.js"></script>
+
+    <script src="JS/Project(2)_Jejutt_subpage_hotels/script.js"></script>
+    </head>
+
+
+
+    
+            
+
+
+    
+    
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        /* font-family: aaa; */
+        font-family: "Noto Sans KR";
+        color: #494949;
+  
+
+    }
+
+
+    body p{
+        font-size: 15px;
+    }
+
+  
+
+    
+    
+    header{
+        width: 100%;
+        height: 100%;
+        background-image: url("img/Jejutt/gggggg.png");
+        background-size: cover 100%;
+        background-position: top center;
+        background-repeat: no-repeat;
+    }
+
+    .logo{
+        width: 300px;
+        margin: 0 auto;
+        /* border: 1px solid red; */
+        text-align: center;
+        padding-top: 75px;
+        padding-bottom: 40px;
+    }
+
+    .search{
+        float: left;
+    }
+
+
+    .search input{
+        background-color: transparent;
+        border: 1.5px solid #EEA703;
+        border-radius: 10px;
+        position: relative;
+        top: -2px;
+        width: 165px;
+        height: 17px;
+    }
+
+    .search img{
+        margin: 0 10px;
+    }
+
+    .mainmenu{
+        position: relative;
+        /* padding-top: 25px; */
+        width: 960px;
+        height: 50px;
+        margin: 0 auto;
+        /* border: 1px solid red; */
+    }
+
+    .mainmenu ul{
+        float: left;
+        height: 50px;
+        width: 100%;
+        /* border: 1px solid red; */
+        text-align: center;
+    }
+
+    .mainmenu ul li{
+        float: left;
+        padding: 0 19px;
+        /* border: 1px solid red; */
+    }
+
+
+    .mainmenu ul li a{
+        color: #EEA703;
+    }
+
+    
+
+    .signIn{
+        width: 250px;
+        height: 220px;
+        background-color: #e0e0e0;
+        border-radius: 10px;
+        font-size: 12px;
+        color: rgb(27, 27, 27);
+        position: absolute;
+        right: 20px;
+        top: 30px;
+        
+    }
+
+    .signIn input{
+        border: none;
+        border-bottom: 1px solid gray;
+        background-color: transparent;
+    }
+
+    .signIn input:first-child{
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+
+
+    .signIn input:last-child{
+        margin-bottom: 20px;
+    }
+
+    
+
+    .signIn a{
+        color: rgb(27, 27, 27);
+        
+    }
+
+
+    .signIn h2{
+        color: rgb(27, 27, 27);
+        margin-top: 20px;
+    }
+
+    .SB{
+        width: 190px;
+        background-color: #EEA703;
+        margin-bottom: 10px;
+    }
+
+    button{
+        color: whitesmoke;
+        /* font-weight: 700; */
+        width: 870px;
+        height: 25px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 3px;
+        background-color: #7BB1B3 ;
+        /* background-color: #eea703d7; */
+        border: none;
+        /* border: 1px solid rgb(122, 122, 122); */
+        border-radius: 5px;
+        display: block;
+        margin-top: 30px;
+        
+
+    }
+
+    .best{
+        width: 960px;
+        margin: 0 auto;
+    }
+
+
+    .name{
+        margin: 10px 0 10px 0;
+    }
+
+    .sr{
+        /* background-image: url(img/Jerusalem/jeju/arrow.png); */
+        width: 310px;
+        float: left;
+        height: 350px;
+        margin: 5px;
+        margin-top: 2px;
+        position: relative;
+        
+        /* border: 1px solid red; */
+    }
+
+
+    .hover{
+        position: absolute;
+        width: 310px;
+        /* float: left; */
+        /* height: 350px; */
+        z-index: 999;
+    }
+
+    .hover img{
+        width: 152px;
+        height: 200px;
+        /* border:  1px solid red; */
+        /* float: left; */
+    }
+
+
+
+
+    .pics{
+        position: absolute;
+        width: 310px;
+        height: 200px;
+    }
+
+    .pics img{
+        width: 310px;
+        height: 200px;
+    }
+
+
+    .pics:hover .hov{
+        opacity: 0;
+        
+
+    }
+
+
+    article{
+        width: 960px;
+        margin: 0 auto;
+        
+    }
+
+
+    article h2{
+        /* font-size: 30px; */
+        /* text-align: center; */
+       margin: 100px 0;
+    }
+
+    .name{
+        font-size: 22px;
+        font-weight: 700;
+   
+    }
+
+
+    .pics p{
+       /* width: 10000px; */
+       height: 200px;
+       /* border: 1px solid red; */
+       margin: 0;
+
+   }
+
+   .pics img{
+       float: left;
+   }
+
+   .pics{
+       width: 310px;
+       height: 200px;
+       /* border: 2px solid blue; */
+       margin: 0 auto;
+       overflow: hidden;
+       position: relative;
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .clear{clear: both;}
+
+    footer{
+        
+        /* background-color:rgb(228, 160, 3); */
+        background-image: url(img/Jejutt/ssss.jpg);
+        background-position: center bottom;
+        background-size: 100% 800px;
+
+        margin: 0 auto;
+
+        /* height: 300px; */
+
+
+    }
+
+    footer p{
+        color: white;
+        font-size: 12px;
+        
+        
+    }
+
+    .footer{
+
+        width: 920px;
+        margin: 0 auto;
+        padding-top: 20px;
+        margin-top: 100px;
+       
+
+        
+    }
+
+    footer .sns{
+        float: right;
+    }
+
+    footer .sns img{
+        padding-left: 20px;
+
+    }
+
+    .footer .text{
+        padding-top: 30px;
+    }
+
+    .footer span{
+        display: block;
+        text-align: right;
+        padding-top: 20px;
+        color: white;
+        font-size: 12px;
+        padding-bottom: 10px;
+    }
+
+    
+
+
+</style>
+
+<script>
+
+
+    // $(function(){
+    // $(".signIn").hide();
+    // //css의 display none과 같다. 
+
+    // $(".in").click(function(){
+    //     $(".signIn").show();
+            
+    //     });
+
+   
+
+    // });
+
+
+$(function(){
+$(".signIn").hide();
+
+
+
+$(".in").click(function(){
+
+   var result=$(".signIn").is(":visible");     
+
+        if(result==true){
+            $(".signIn").hide(230, "linear");
+            }else{
+            $(".signIn").show(230, "linear");    
+            }
+    
+        });
+
+
+});
+</script>
+
+<body>
+
+<header>
+     <div class="logo">
+            <a href="Project(2)_Jejutt_index.html"><img src="img/Jejutt/Jejutt.png" alt=""></a>
+        </div>
+    <nav>
+        <div class="mainmenu">
+           <ul>
+               <li><a href="#">홈</a></li>
+               <li><a href="#">항공</a></li>
+               <li><a href="#">숙소</a></li>
+               <li><a href="#">렌트카</a></li>
+               <li><a href="#">골프투어</a></li>
+               <li><a href="#">버스투어</a></li>
+               <li><a href="#">단체투어</a></li>
+               <li><a href="#">커뮤니티</a></li>
+
+                <div class="search">
+                    <input type="text">
+                    <a href="#"><img src="img/Jejutt/Search.png " alt=""></a>
+                    <a href="#"><img src="img/Jejutt/human.png " alt=""></a>
+                    <a href="#"><img class="in" src="img/Jejutt/Notifications.png " alt=""></a>
+
+                </div>
+
+                <div class="signIn">
+                    <h2>LOG IN</h2>
+
+                    <br>
+                    <input type="text" placeholder="아이디">
+                    <input type="text" placeholder="비밀번호">
+                    <button class="SB">
+                        로그인
+                    </button>
+
+                    <a href="#">ID/비밀번호 찾기</a>
+                    <br>
+                    <a href="Project(2)_Jejutt_subpage_sign_up.html">회원가입</a>
+                </div>
+
+               
+           </ul>
+
+        </div>
+
+    </nav>
+
+
+    
+    
+       
+    </header>
+    
+    <article>
+
+
+        <h2>| 베스트 숙소 둘러보기</h2>
+        <div class="best">
+
+
+
+            <div class="suite sr">
+
+                <div class="hover">
+                    <img class="pre" src="img/Jejutt/jeju/arrow_pre.png" alt="1">
+                    <img class="nx" src="img/Jejutt/jeju/arrow_nx.png" alt="1">
+                </div>
+
+
+                <div class="pics pics1">
+                    <p>
+                        
+                        <img  src="img/Jejutt/suite4.jpg" alt="">
+                        <img src="img/Jejutt/suite1.jpg" alt="">
+                        <img src="img/Jejutt/suite2.jpg" alt="">
+                        <img src="img/Jejutt/suite3.jpg" alt="">
+                        <img src="img/Jejutt/suite5.jpg" alt="">
+                    </p> 
+                
+                </div>
+                
+                    
+
+
+                <div class="cont">
+                    <p class="name">| 스위트 호텔 제주</p>
+                    <p class="des">
+                        싱그러운 북태평양의 푸르른 바다와 매혹적인 한라산을 전경으로 한 오두막 휴양지입니다.                </p>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <div class="chuidasun sr" >
+
+
+
+                <div class="hover">
+                    <img class="pre" src="img/Jejutt/jeju/arrow_pre.png" alt="2">
+                    <img class="nx" src="img/Jejutt/jeju/arrow_nx.png" alt="2">
+                </div>
+
+                <div class="pics pics2">
+
+                <p>
+                <img src="img/Jejutt/cs1.jpg" alt="">
+                <img src="img/Jejutt/cs2.jpg" alt="">
+                <img src="img/Jejutt/cs3.jpg" alt="">
+                <img src="img/Jejutt/cs4.jpg" alt="">
+                </p>
+                </div>
+                <!-- <a href="#"><div class="hov">
+                    자세히 보기
+                </div></a> -->
+                <div class="cont">
+                    <p class="name">| 취다선 리조트</p>
+                    <p class="des">
+                        <!-- 조용하고, 제주스러운 마을 풍경이 매력적인 동쪽 제주.
+                        오조리 해안가에 위치한 취다선은  -->
+                        다도와 명상, 아름다운 자연과 함께 내 안의 작은 안식
+                        처를 발견하기에 충분한 공간입니다.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="hiddencliff sr" >
+
+
+                
+                <div class="hover">
+                    <img class="pre" src="img/Jejutt/jeju/arrow_pre.png" alt="3">
+                    <img class="nx" src="img/Jejutt/jeju/arrow_nx.png" alt="3">
+                </div>
+
+                <div class="pics pics3">
+
+                    <p>
+                    <img src="img/Jejutt/hc1.jpg" alt="">
+                    <img src="img/Jejutt/hc5.jpg" alt="">
+                    <img src="img/Jejutt/hc3.jpg" alt="">
+                    <img src="img/Jejutt/hc4.jpg" alt="">
+               
+                    </p>
+                    </div>
+                <!-- <a href="#"><div class="hov">
+                    자세히 보기
+                    </div></a> -->
+
+                    <div class="cont">
+                    <p class="name">| 히든클리프</p>
+                    <p class="des">
+                        180만년 동안 숨겨져 있던 제주를 담아 클리프 호텔 & 네이쳐를 새롭게 선보입니다.
+                    </p>
+                </div>
+            </div>
+
+
+
+
+            <div class="shilla sr">
+
+                <div class="hover">
+                    <img class="pre" src="img/Jejutt/jeju/arrow_pre.png" alt="4">
+                    <img class="nx" src="img/Jejutt/jeju/arrow_nx.png" alt="4">
+                </div>
+                
+                <div class="pics pics4">
+
+                    <p>
+                    <img src="img/Jejutt/shilla1.jpg" alt="">
+                    <img src="img/Jejutt/shilla2.jpg" alt="">
+                    <img src="img/Jejutt/shilla3.jpg" alt="">
+                    <img src="img/Jejutt/shilla4.jpg" alt="">
+                    <img src="img/Jejutt/shilla5.jpg" alt="">
+                    <img src="img/Jejutt/shilla6.jpg" alt="">
+               
+                    </p>
+                    </div>
+
+                <!-- <a href="#"><div class="hov">
+                    자세히 보기
+                </div></a> -->
+                <div class="cont">
+                <p class="name">| 신라호텔</p>
+                <p class="des">
+                    <!-- 제주의 아름다운 풍광을 담은 리조트로써 그 명성을 쌓아가고 있는 제주신라호텔은 90년 개관 후 부터 지금까지 품격과 문화가 있는 휴식지로써 수많은 굵직한 국제행사를 성공적으로 치러온 최고의 리조트입니다. -->
+                    90년의 역사를 담아 이국적인 분위기와 최고의 시설을 선보이며 품격있는 경험을 선사합니다. 
+                </p>
+                </div>
+            </div>
+
+
+
+     
+            <div class="masion sr">
+
+                <div class="hover">
+                    <img class="pre" src="img/Jejutt/jeju/arrow_pre.png" alt="5">
+                    <img class="nx" src="img/Jejutt/jeju/arrow_nx.png" alt="5">
+                </div>
+                
+                <div class="pics pics5">
+
+                    <p>
+                    <img src="img/Jejutt/masion1.jpg" alt="">
+                    <img src="img/Jejutt/masion2.jpg" alt="">
+                    <img src="img/Jejutt/masion3.jpg" alt="">
+                    <img src="img/Jejutt/masion4.jpg" alt="">
+                    <img src="img/Jejutt/masion5.jpg" alt="">
+                
+               
+                    </p>
+                    </div>
+
+ 
+                <!-- <a href="#"><div class="hov">
+                    자세히 보기
+                </div></a> -->
+                <div class="cont">
+                    <p class="name">| 메종 글래드</p>
+                    <p class="des">
+                        제주 그랜드 호텔이 지닌 헤리티지를 창조적으로 재해석하며, '그곳에서만의 경험'을 제공합니다.  
+                    </p>
+                </div>
+            </div>
+
+
+
+
+            <div class="heavichi sr">
+                <div class="hover">
+                    <img class="pre" src="img/Jejutt/jeju/arrow_pre.png" alt="6">
+                    <img class="nx" src="img/Jejutt/jeju/arrow_nx.png" alt="6">
+                </div>
+                
+                <div class="pics pics6">
+
+                    <p>
+                    <img src="img/Jejutt/hv2.jpg" alt="">
+                    <img src="img/Jejutt/hv1.jpg" alt="">
+                    <img src="img/Jejutt/hv3.jpg" alt="">
+                    <img src="img/Jejutt/hv4.jpg" alt="">
+                    <img src="img/Jejutt/hv5.jpg" alt="">
+                
+               
+                    </p>
+                    </div>
+
+                <div class="cont">
+                    <p class="name">| 해비치</p>
+                    <p class="des">
+                      
+                        제주 동부 표선에서 해가 가장 먼저 드는 곳에서 더욱 특별한 아침을 선물합니다.
+                        <!-- 제주 자연 환경을 그대로 살린 
+                        다이내믹한 코스로 구성된 36홀의 골프 코스를 선보입니다. -->
+                    </p>
+                </div>
+            </div>
+
+       
+
+<!-- 
+            <div class="cloud sr">
+                <img src="img/Jerusalem/cloud6.jpg" alt="">
+                <div class="hov">
+                    자세히 보기
+                    </div>
+                <div class="cont">
+                    <p class="name">더클라우드 풀앤 스파</p>
+                    <p class="des">
+                        제주 동쪽끝 바다 절벽에 위치한 ‘THE CLOUD POOL & SPA’는 모든 객실에서 제주바다와 함께 성산일출봉, 우도를 조망할 수 있습니다. 
+                    </p>
+                </div>
+            </div> -->
+
+
+
+
+
+            <!-- <div class="comma sr">
+                <img src="img/Jerusalem/comma5.jpg" alt="">
+                   <div class="hov">
+                    자세히 보기
+                    </div>
+
+                <div class="cont">
+                    <p class="name">콤마앤스파 리조트</p>
+                    <p class="des">
+                        제주 돌담의 고즈넉함을 전경으로 담은 스파 리조트로, 천연 비누만들기 체험으로 더욱 특별한 경험을 만들어 드립니다. 
+                    </p>
+                </div>
+            </div> -->
+
+
+
+
+        </div>
+
+        
+    </article>
+
+
+
+
+    <div class="clear"></div>
+
+
+
+
+    <footer>
+        <div class="footer">
+        <div class="sns">
+            <img src="img/Jejutt/insta.png" alt="">
+            <img src="img/Jejutt/fb.png" alt="">
+            <img src="img/Jejutt/tw.png" alt="">
+        </div>
+
+        <div class="text">
+       <p> 회사소개  |  이용약관  |  개인정보 취급 방침  |  사업자 등록증  | 인허가보험증권  |  통신판매업신고증
+       </p>
+
+       <p>
+        제주특별자치도 제주시 용해로 82(용담이동) (우편 : 63115)   |   대표 김효정   |   전화 064-756-4114   |   팩스 064-723-2843 
+       </p>
+
+       <p>
+        사업자 802-24-00168 | 통신판매 제 2017-제주용담2-10 호 
+        부가통신 제 2017-20 호 | 정보관리책임자명 김효정
+       </p>
+
+
+       <span>
+        Copyright© 제주티티닷컴. All Rights Reserved.
+       </span>
+    </div>
+    </div>
+    </footer>
+
+
+</div>
+
+</body>
+</html>

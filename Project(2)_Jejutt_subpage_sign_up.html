@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        /* font-family: aaa; */
+        font-family: Noto Sans KR;
+        color: #494949;
+        
+     
+    }
+
+    input, select{
+        border: none;
+        border-bottom: 2px solid rgb(190, 190, 190);
+       
+    }
+
+    input::placeholder{
+        color: #494949;
+    }
+
+    p{
+        font-weight: 700;
+        font-size: 14px;
+
+    }
+
+    .form{
+        width: 300px;
+        margin: 0 auto;
+        margin-top: 90px;
+    }
+
+
+    .pw, .name, .sex, .bday, .prefix, .marketing{
+        margin-bottom: 20px;
+    }
+
+    .id{
+        position: relative;
+        margin-bottom: 20px;
+        height: 45px;
+    }
+
+    .id input{
+        position: absolute;
+        bottom: 0px;
+        width: 200px;
+       
+
+    }
+
+    .id select{
+        position: absolute;
+        bottom: 0px;
+        left: 205px;
+        
+        margin-left: 5px;
+        width: 90px;
+      
+        
+        
+    }
+
+    .pw input{
+        
+        width: 300px;
+    
+    }
+
+    .name{
+        float: left;
+        width: 150px;
+    }
+    .name input{
+        width: 130px;
+    }
+
+    .sex{
+        width: 140px;
+        float: right;
+        padding-left: 10px;
+        font-size: 14px;
+    }
+
+    .sex input{
+        position: relative;
+        top: 2px;
+        font-size: 14px;
+        
+    }
+
+    .bday{
+        width: 300px;
+    }
+
+    .bday input{
+        width: 300px;
+
+    }
+
+    .prefix select{
+        margin-right: 3px;
+    }
+
+    .prefix{
+        width: 300px;
+        position: absolute;
+    }
+
+    .first{
+     
+        position: absolute;
+        bottom: 0px;
+        width: calc(248px/2);
+    }
+    .last{
+     
+     position: absolute;
+     bottom: 0px;
+     left: 175px;
+     width: calc(248px/2);
+ }
+
+    .clear{
+        clear: both;
+    }
+
+    .marketing{
+        margin: 0 auto;
+        margin-top: 70px;
+        text-align: center;
+        width: 120px;
+        font-size: 14px;
+        
+        /* border: 1px solid red; */
+    }
+
+    button{
+
+        margin-top: 40px ;
+        width: 300px;
+        background-color: #EEA703;
+        border: none;
+        border-radius: 20px;
+        /* color: white; */
+        font-weight: 700;
+        padding: 5px;
+        margin-bottom: 20px;
+
+    }
+
+    button a{
+        /* border: 1px solid red; */
+        /* width: 300px; */
+        display: block;
+        
+        
+    }
+
+    
+
+
+
+
+
+    
+    header{
+        width: 100%;
+        height: 100%;
+        background-image: url("img/Jejutt/gggggg.png");
+        background-size: cover 100%;
+        background-position: top center;
+        background-repeat: no-repeat;
+    }
+
+    .logo{
+        width: 300px;
+        margin: 0 auto;
+        /* border: 1px solid red; */
+        text-align: center;
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+
+    .search{
+        float: left;
+    }
+
+
+    .search input{
+        background-color: transparent;
+        border: 1.5px solid #EEA703;
+        border-radius: 10px;
+        position: relative;
+        top: -2px;
+        width: 165px;
+        height: 17px;
+    }
+
+    .search img{
+        margin: 0 10px;
+    }
+
+    .mainmenu{
+        position: relative;
+        /* padding-top: 25px; */
+        width: 960px;
+        height: 50px;
+        margin: 0 auto;
+        /* border: 1px solid red; */
+    }
+
+    .mainmenu ul{
+        float: left;
+        height: 50px;
+        width: 100%;
+        /* border: 1px solid red; */
+        text-align: center;
+    }
+
+    .mainmenu ul li{
+        float: left;
+        padding: 0 19px;
+        /* border: 1px solid red; */
+    }
+
+
+    .signIn{
+        width: 250px;
+        height: 220px;
+        background-color: white;
+        border-radius: 10px;
+        font-size: 12px;
+        color: rgb(27, 27, 27);
+        position: absolute;
+        right: 20px;
+        top: 30px;
+        
+    }
+
+    .signIn input{
+        border: none;
+        border-bottom: 1px solid gray;
+    }
+
+    .signIn input:first-child{
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+
+
+    .signIn input:last-child{
+        margin-bottom: 20px;
+    }
+
+    
+
+    .signIn a{
+        color: rgb(27, 27, 27);
+        
+    }
+
+
+    .signIn h2{
+        color: rgb(27, 27, 27);
+        margin-top: 20px;
+    }
+
+    .SB{
+        width: 190px;
+        background-color: #EEA703;
+        margin-bottom: 10px;
+    }
+
+
+
+</style>
+
+<body>
+
+
+    
+    <header>
+        <div class="logo">
+            <a href="Project(2)_Jejutt_index.html"><img src="img/Jejutt/Jejutt.png" alt=""></a>
+        </div>
+    </header>
+        
+
+    <div class="form">
+        <div class="id">
+
+
+            <p>아이디</p>
+            <input type="text" placeholder="아이디를 입력하세요">   
+
+            <select name="" id="">
+                <option value="google">google.com</option>
+                <option value="naver.com" >naver.com</option>
+                <option value="daum">daum.net</option>
+                <option value="google">google.com</option>
+
+            </select>
+        </div>
+        <br>
+
+        <div class="pw">
+            <p>비밀번호</p>
+
+            <input type="password" placeholder="비밀번호를 입력하세요(6자리 이상, 특수기호 포함)">  
+            <input type="password" placeholder="비밀번호를 확인하세요.">  
+        </div>
+
+        <div class="name">
+            <p>이름</p>
+            <input type="text" placeholder="이름을 입력하세요."> 
+        </div>
+
+        <div class="sex">
+            <p>성별</p>
+            여<input type="radio" name="a">
+            남<input type="radio" name="a">
+        </div>
+
+        <div class="clear"></div>
+
+
+        <div class="bday">
+            <p>생년월일</p>
+            <input type="date">
+        </div>
+
+
+        <div class="prefix">
+            <p>휴대폰 번호</p>
+            <select  id="">
+                <option value="010">010</option>
+                <option value="016">016</option>
+                <option value="018">018</option>
+                <option value="019">019</option>
+
+                <input class="first" type="text">
+                <input class="last" type="text">
+            </select>
+        </div>
+
+        <div class="clear"></div>
+
+
+        <div class="marketing">
+            <p>마케팅 수신 동의</p>
+            SMS <input type="checkbox" name="a">
+            이메일 <input type="checkbox" name="a">
+
+        </div>
+
+        <button><a href="#">회원가입</a></button>
+
+
+    </div>
+
+
+</body>
+</html>

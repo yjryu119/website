@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+</head>
+
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #3A3B40;
+    font-size: 12px;
+}
+
+.wrap{
+    width: 960px;
+    margin: 0 auto;
+}
+
+.clear{clear: both;}
+
+
+header{
+    width: 100%;
+}
+
+.logo{
+    width: 100%;
+    margin: 0px auto;
+    height: 100vh;
+    background-image: url(img/OTTOGI/kettle.jpg) ;
+    background-size: 100vw;
+    /* background-position: top; */
+    /* text-align: center; */
+    /* border: 1px solid red; */
+    /* background-color: #69615E; */
+}
+
+.logo img{
+    /* padding: 100px 0; */
+    /* margin-top: 30px; */
+    width: 50%;
+    
+    
+    /* position: relative; */
+}
+
+.back{
+    width: 50%;
+    height: 100vh;
+    float: left;
+    /* margin-top: 100px; */
+    /* margin: 100px auto; */
+}
+
+
+
+.logoimg{
+    width: 400px;
+
+    position: absolute;
+    /* top: 25px; */
+    top: 21%;
+    left: calc(50% - 200px);
+    margin: 0 auto;
+    text-align: center;
+    /* left: 30px; */
+}   
+
+
+
+nav{
+    width: 100px;
+   
+    /* background-color: white; */
+}
+
+nav{
+    width: 50%;
+    position: absolute;
+    top: 70px;
+    left: 16%;
+}
+
+nav ul li{
+    margin-right: 15%;
+    float: left;
+}
+
+nav li a{
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    
+}
+
+.right{
+    position: relative;
+
+}
+
+.logo p{
+    position: absolute;
+    width: 400px;
+    /* top: 4%; */
+    /* left: calc(50% - 99px); */
+    color: white;
+    font-weight: 400;
+    font-size: 35px;
+
+}
+
+.sub{
+    width: 47%;
+    position: absolute;
+    top: 70px;
+    right: 3%;
+    /* border: 1px solid red; */
+}
+
+.sub li{
+    margin-left: 15%;
+    float: left;
+    
+}
+
+.sub li a{
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+article{
+    width: 100%;
+    /* height: 2000px; */
+}
+
+.mainmenu .log{
+    width: 103px;
+    margin: 0 5%;
+    float: left;
+    height: 110px;
+}
+
+.mainmenu{
+    float: left;
+    /* margin-top: 20px; */
+    width: 95%;
+    height: 100%;
+    /* border: 1px solid red; */
+    position: sticky;
+    /* background-color: white;  */
+    top: 0px;
+    z-index: 999;
+    padding-right: 5%;
+    background-color: white;
+}
+
+.mainmenu>ul{
+    width: 100%;
+    z-index: 999;
+    background-color: white; 
+    z-index: 999;
+    height: 110px;
+    
+
+}
+
+
+
+.mainmenu .ml{
+    float: left;
+    /* padding: 3.5% 3.5% 0 3.5% ; */
+    /* margin: 3.5% 3.5%; */
+    /* border: 1px solid red; */
+    z-index: 909;
+    width: 9%;
+    text-align: center;
+    padding: 3.5% 1% 2% 1%;
+
+
+    
+   
+}
+
+.mainmenu .ml a{
+    font-weight: 600;
+    font-size: 14px;
+    z-index: 999;
+}
+
+
+.mainmenu>ul:hover+.sublist{
+    opacity: 1;
+    z-index: 19;
+}
+
+
+
+
+
+.sublist{
+    
+    clear: both;
+    /* display: none; */
+    opacity: 0;
+    transition: all 1s;
+    width: 95%;
+    height: 250px;
+    /* float: left; */
+    /* border: 1px solid blue; */
+    
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 9;
+    padding-right: 5%;
+    position: absolute;
+}
+
+
+.sublist .log_2{
+    width: 7%;
+    margin: 0 5%;
+    float: left;
+    /* display: none; */
+}
+
+.sublist img{
+    width: 7%;
+    margin: 0 5%;
+    float: left;
+}
+
+.sl:first-child{
+    margin-left: 258px;
+}
+
+.sl{
+
+    float: left;
+    width: 9%;
+    text-align: center;
+    padding: 3% 1% 2% 1%;
+    margin-bottom: 20px;
+    /* border: 1px solid red; */
+    
+}
+
+
+
+.sl li{
+    margin-bottom: 10px ;
+    /* padding: 0 3.5% 0 3.5% ; */
+   
+
+}
+
+
+
+
+.one{
+    width: 100%;
+
+}
+
+.one .tab{
+    padding-top: 100px ;
+    width: 80%;
+    /* height: 100%; */
+    margin: 0 auto;
+    height: 600px;
+    /* border: 1px solid red; */
+    
+
+}
+
+.one .tab .skip{
+    float: left;
+    width: 100%;
+    /* border: 1px solid blue; */
+    /* margin: 0 2%; */
+    
+    /* margin-right: 1%; */
+}
+
+.one .fourth{
+
+    float: right;
+    width: 100%;
+    /* margin-right: 2%; */
+}
+
+.group{
+    width: 20%;
+    float: left;
+    margin-right: calc(7% - 5px) ;
+    /* text-align: center; */
+    position: relative;
+
+}
+
+
+.g4{
+    float: right;
+    width: 20%;
+    position: relative;
+    overflow: hidden;
+}
+
+.tab h3{
+    /* position: absolute; */
+    /* top: 50%;
+    left: 10%; */
+    /* color: white; */
+    margin-top: 20px;
+    float: left;
+    /* border: 1px solid red; */
+    font-size: 14px;
+}
+
+.tab p{
+    margin-top: 10px;
+    float: left;
+    text-align: justify;
+    font-size: 12px;
+}
+
+.tabImg{
+    height: 100%;
+
+}
+
+.more{
+    transition: all 0.5s;
+    width: 100%;
+    height: 360px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    text-align: center;
+    opacity: 0;
+    overflow: hidden;
+    /* border: 1px solid red; */
+    /* float: left; */
+}
+
+.more p{
+    text-align: center;
+    color: white;
+    width: 100%;
+    margin-top: 150px;
+    font-size: 17px;
+
+}
+
+.group:hover .more{
+    /* transform: translateY(303px); */
+    opacity: 1;
+}
+
+.g4:hover .more{
+    /* transform: translateY(-303px); */
+    opacity: 1;
+}
+
+
+
+
+
+.three{
+    width: 100%;
+    height: 600px;
+}
+
+
+.three h3{
+    text-align: center;
+    /* margin-top: 30px; */
+    font-size: 26px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: rgba(220, 203, 175, 0.37);
+    
+}
+
+.three .drinks{
+    width: 15%;
+    /* border: 1px solid red; */
+    float: left;
+    margin: 10px;
+    margin-top: 100px;
+    padding-bottom: 100px;
+}
+.three .drinks img{
+   
+    width: 100%;
+    /* padding-bottom: 100px; */
+    transition: all 0.7s;
+    /* border: 1px solid red; */
+    z-index: 1;
+    
+}
+
+.three .drinks h4{
+    /* margin-left: 35px; */
+    margin-top: 10px;
+    text-align: center;
+}
+
+.three .drinks img:hover {
+    /* transition: all 0.5s; */
+    transform: translateY(-50px);
+    background-color: gray;
+}
+
+.two{
+    clear: both;
+    height: 700px;
+    width: 880px;
+    margin: 0 auto;
+    background-image: url(img/OTTOGI/teatime.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-top: 200px;
+    /* border: 1px solid red; */
+    /* height: 682px;
+    margin: 0 auto;
+    width: 80%;
+    background-color: rgba(178, 168, 143, 0.76); */
+    /* float: left; */
+    /* border: 1px solid red; */
+
+    
+}
+
+
+
+.two p{
+    float: left;
+    font-size: 15px;
+    margin-top: 230px;
+    margin-left: 420px;
+    font-weight: 600;
+    
+
+}
+
+footer{
+    clear: both;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    /* margin-top: 100px; */
+    font-size: 10px;
+    /* border: 1px solid blue; */
+}
+
+footer ul{
+    height: 50px;
+    width: 100%;
+    border-top: 1px  solid gainsboro;
+    border-bottom: 1px  solid gainsboro;
+}
+footer ul li{
+    margin-top: 10px;
+    float: left;
+    margin: 17px 120px 0 120px;
+    /* border: 1px solid red; */
+}
+
+
+
+.foot{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 10px;
+}
+
+
+
+
+</style>
+<body>
+    <header>
+
+        <div class="logo">
+            <img src="img/OTTOGI/slogan2.png" alt="" >
+         
+            <div class="logoimg">
+         
+        </div>
+
+        
+    </header>
+
+<div class="clear"></div>
+
+    <article>
+        <div class="mainmenu">
+            
+            <img class="log" src="img/OTTOGI/BALCKLOGO(3).png" alt="">
+                
+                <ul>
+                    <li class="ml"><a href="#">회사소개</a>
+            
+                    </li>
+
+                    <li class="ml"><a href="#">커피이야기</a>
+                
+                    </li>
+
+                    <li class="ml"><a href="#">커피메뉴</a> 
+                    
+                    </li>
+
+                    <li class="ml"><a href="#">온라인몰</a>
+                    
+                    </li>
+
+                    <li class="ml"><a href="#">회원가입</a>
+                    
+                    </li>
+
+                    <li class="ml"><a href="#">마이페이지</a>
+                    
+                    </li>
+
+                    <li class="ml"><a href="#">고객센터</a>
+                    
+                    </li>
+
+                </ul>
+
+                <div class="sublist">
+
+                    <img class="log" src="img/OTTOGI/trans.png" alt="">
+                    <ul class="sl">
+                        <li><a href="#">오뚜기 소개</a></li>
+                        <li><a href="#">오뚜기 이념</a></li>
+                        <li><a href="#">CI 소개</a></li>
+                    </ul>
+                    <ul class="sl">
+                        <li><a href="#">오뚜기커피 소개</a></li>
+                        <li><a href="#">국내 사업장</a></li>
+                        <li><a href="#">해외 연구소</a></li>
+                    </ul>
+                    <ul class="sl">
+                        <li><a href="#">2020 신메뉴</a></li>
+                        <li><a href="#">베스트 메뉴</a></li>
+                        <li><a href="#">커피</a></li>
+                        <li><a href="#">차</a></li>
+                        <li><a href="#">스무디</a></li>
+                        <li><a href="#">밀크티</a></li>
+                        <li><a href="#">에이드</a></li>
+
+                    </ul>
+                    <ul class="sl">
+                        <li><a href="#">몰 바로가기</a></li>
+                        <li><a href="#">원두</a></li>
+                        <li><a href="#">믹스 및 프림</a></li>
+                        <li><a href="#">시럽</a></li>
+                    </ul>
+                    <ul class="sl">
+                        <li><a href="#">멤버십 안내</a></li>
+
+                    </ul>
+                    <ul class="sl">
+                        <li><a href="#">마이페이지</a></li>
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">주문정보</a></li>
+                    </ul>
+                    <ul class="sl">
+                        <li><a href="#">Q&A게시판</a></li>
+                        <li><a href="#">24시간 <br> 라이브 상담</a></li>
+                        <li><a href="#">고객한마디</a></li>
+                        <li><a href="#">공장견학</a></li>
+                    </ul>
+
+                </div>
+        </div>
+
+
+        
+<div class="clear"></div>
+
+
+
+        <section class="one">
+
+
+            <div class="tab">
+                <div class="g1 group">
+
+                    
+                        <img class="skip"src="img/OTTOGI/first.jpg" alt="">
+                        
+                        <div class="more">
+                            <p>더 보기</p>
+                        </div>
+                    
+                
+                    <h3>| 엄선된 유기농 원두</h3>
+                    <p>오뚜기 커피는 최상급 유기농 원두만을 엄선하여 제공합니다.
+                        또한 마스터 로스터의 철저한 감독아래 고객 여러분께 최상의 신선도를 즐길 수 있도록 항상 연구합니다.
+                        오뚜기 커피는 국내에서 재배된 최상급 유기농 원두만을 엄선하여 제공합니다.
+                        
+                        </p>
+                        <!-- <div class="more">
+                            <p>더 보기</p>
+                            </div> -->
+                </div>
+
+<!-- 
+                <div class="two pics">
+                    <a href=""><div class="hov"></div></a>
+
+                    <div class="cont">
+                        <h2>렌터카 둘러보기</h2>
+                        <p>패키지와 함께 이용시, <br> 최대 85% 할인혜택
+                        </p>
+                    </div>
+                </div> -->
+
+                <div class="g2 group">
+                    <img class="skip"src="img/OTTOGI/second.jpg" alt="">
+                    <h3>| 올바른 고용 문화</h3>
+                    <p>오뚜기 커피는 국내에서 재배된 최상급 유기농 원두만을 엄선하여 제공합니다.
+                        또한 마스터 로스터의 철저한 감독아래 고객 여러분께 최상의 신선도를 즐길 수 있도록 항상 연구합니다.
+                        
+                        
+                        </p>
+                        <div class="more">
+                            <p>더 보기</p>
+                            </div>
+                </div>
+                
+                <div class="g3 group">
+                    <img class="skip"src="img/OTTOGI/third.jpg" alt="">
+                    <h3>| 옛날 그 정성 그대로</h3>
+                    <p>오뚜기 커피는 국내에서 재배된 최상급 유기농 원두만을 엄선하여 제공합니다.
+                        또한 마스터 로스터의 철저한 감독아래 고객 여러분께 최상의 신선도를 즐길 수 있도록 항상 연구합니다.
+                        오뚜기 신선도를 즐길 수 즐길 수 재배된 최상급 유기농.
+                        
+                        </p>
+                        <div class="more">
+                            <p>더 보기</p>
+                            </div>
+                </div>
+                
+                <div class="g4">
+                    <img class="fourth" src="img/OTTOGI/fourth.jpg" alt="">
+                    <h3>| 합리적인 가격</h3>
+                    <p>오뚜기 커피는 국내에서 재배된 최상급 유기농 원두만을 엄선하여 제공합니다.
+                        또한 마스터 로스터의 철저한 감독아래 고객 여러분께 최상의 신선도를 또한 마스터 로스터의 또한 마스터 로스터의 철저한 감독아래 고객 여러분께 최상의 신선도를 즐길 수 있도록 항상 연구합니다.
+                        
+                        </p>
+                        <div class="more">
+                            <p>더 보기</p>
+                            </div>
+                </div>
+             </div>
+
+        </section>
+
+
+
+        
+
+
+        <section class="three">
+
+
+            <h3>베스트 메뉴</h3>
+
+            <div class="drinks">
+                <img src="img/OTTOGI/americano2.jpg" alt="">
+                <h4>[아메리카노]</h4>
+                <h4>2500원</h4>
+
+            </div>
+            <div class="drinks">
+                <img src="img/OTTOGI/cafelatte.jpg" alt="">
+                <h4>[카페 라떼]</h4>
+                <h4>3000원</h4>
+            </div>
+            <div class="drinks">
+                <img src="img/OTTOGI/coldbrew.jpg" alt="">
+                <h4>[콜드브루]</h4>
+                <h4>3500원</h4>
+            </div>
+            <div class="drinks">
+                <img src="img/OTTOGI/coldbrewlatte.jpg" alt="">
+                <h4>[아이스 연유라떼]</h4>
+                <h4>3500원</h4>
+            </div>
+            <div class="drinks">
+                <img src="img/OTTOGI/caramel.jpg" alt="">
+                <h4>[카라멜 마키아또]</h4>
+                <h4>3500원</h4>
+            </div>
+            <div class="drinks">
+                <img src="img/OTTOGI/coconut.jpg" alt="">
+                <h4>[아포가토]</h4>
+                <h4>4000원</h4>
+            </div>
+           
+
+        </section>
+        
+        <section class="two">
+            <!-- <img src="img/OTTOGI/teatime.png" alt=""> -->
+            <p>소비자와 오랜시간 함께 걸어온 오뚜기, <br>
+                변하지 않은 가격과 정성으로 새롭게 찾아뵙습니다. 
+                <br> <br> <br> <br>
+                언제나 소비자의 나른한 오후를 함께하는 오뚜기 커피가 되겠습니다.
+            </p>
+
+        </section>
+
+
+    </article>
+<div class="clear"></div>
+    <footer>
+        <ul>
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">고객상담</a></li>
+            <li><a href="#">찾아오시는 길</a></li>
+            <li><a href="#">오뚜기몰</a></li>
+        </ul>
+        <div class="clear"></div>
+        <div class="foot">
+            <img src="img/OTTOGI/f_logo.jpg" alt="">
+            <p>
+                (주)오뚜기 | 사업자등록번호 : 138-81-03238 | 대표이사 이강훈 | 
+                <br> 주소 (14060) 경기도 안양시 동안구 흥안대로 405 (평촌동 160) | 오뚜기 고객상담실 : 080-024-2311 | 
+                <br> 오뚜기라면 고객상담실 : 080-088-1212 (월~금 08:30~17:30) |
+                <br>
+                Copyright ⓒ ottogi co.,Ltd All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
